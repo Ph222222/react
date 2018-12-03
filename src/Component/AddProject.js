@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProjectItem from './ProjectItem';
+import uuid from 'uuid';
 
 
 class AddProject extends Component {
@@ -19,6 +19,7 @@ class AddProject extends Component {
           alert ('no ttile');
       }else{
           this.setState({newProject: {
+              id: uuid.v4(),
               title: this.refs.title.value,
               category: this.refs.category.value
           }
